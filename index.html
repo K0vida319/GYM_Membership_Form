@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./icons/favicon.png">
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Trebuchet MS';
+        }
+        body>div
+        {
+            background-color: white;
+            width: 600px;
+            padding: 30px;
+            margin: 30px;
+            box-shadow: 2px 2px 10px black;
+            border-radius: 10px;
+
+        }
+        .heading
+        {
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 5px;
+            word-spacing: 1px;
+            font-weight: bold;
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .heading>p
+        {
+            padding-left: 10px;
+        }
+        .logo
+        {
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px black;
+
+        }
+        .main-image
+        {
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px grey;
+
+        }
+        form
+        {
+            padding:10px 10px 10px 10px ;
+
+        }
+        dt
+        {
+            margin: 14px 0px 10px ;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        dd
+        {
+            font-size: 14px;
+        }
+        input
+        {
+            padding: 10px ;
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid black;
+        }
+        .gender
+        {
+            display: flex;
+        }
+        .gender>dd
+        {
+            display: flex;
+            margin-right: 30px;
+        }
+        .gender label
+        {
+            padding-left: 10px;
+        }
+        .fitness-guide-div-1, .fitness-guide-div-2
+        {
+            display: flex;
+            
+        }
+        .checkbox-item 
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            
+        }
+        .fitness-guide-div-1 .checkbox-item label
+        {
+            margin:20px 100px 20px 10px;
+        }
+        .fitness-guide-div-2 .checkbox-item label
+        {
+            margin:20px 123px 20px 10px;
+   
+        }
+        select
+        {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+        } 
+        textarea
+        {
+            padding: 10px;
+            width: 100%;
+        }
+        meter, progress
+        {
+            width: 100%;
+        }
+        progress
+        {
+            margin-bottom: 25px;
+        }
+        button
+        {
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            margin: 20px 0px 5px 0px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn-join-now
+        {
+            background-color: rgb(14, 14, 135);
+            color: white;
+            letter-spacing: 3px;
+            border: 1px solid rgb(14, 14, 135);
+        }
+        .btn-reset
+        {
+            background-color: rgb(21, 190, 60);
+            color: white;
+            letter-spacing: 3px;
+            border: 1px solid rgb(21, 190, 60);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="heading">
+            <img class="logo" src="./icons/favicon.png" alt="logo">
+            <p>GYM MEMBERSHIP PORTAL</p>
+        </div>
+        <div>
+            <img class="main-image" src="./image/main-image.jpg" alt="main-image" title="main-image" width="100%">
+        </div>
+        <div>
+            <form>
+                <dl>
+                    <!--Member Name-->
+                    <dt><label for="member-name">Member Name</label></dt>
+                    <dd><input type="text" placeholder="Enter Member Name" pattern="[A-Z][a-zA-Z]{3,14}" id="member-name"></dd>
+                   
+                    <!--Password-->
+                    <dt><label for="password">Password</label></dt>
+                    <dd><input type="password" placeholder="Enter Pasword" pattern=" ( (?=+[A-Z])(?=+[0-9])(?=+[\w\W]) ){8,15}"></dd>
+                    
+                    <!--Gender-->
+                    <dt>Gender</dt>
+                        <div class="gender">
+                            <dd>
+                                <input type="radio" value="Male" name="gender" id="optMale" checked>
+                                <label for="optMale">Male</label>
+                            </dd>
+                            <dd>
+                                <input type="radio" value="Female" name="gender" id="optFemale">
+                                <label for="optMale">Female</label>
+                            </dd>
+                            <dd>
+                                <input type="radio" value="Other" name="gender" id="optOther">
+                                <label for="optMale">Other</label>
+                            </dd>
+                        </div>
+                        
+                    <!--Fitness Goals-->
+                    <dt>Fitness Goals</dt>
+                    <div class="fitness-guide-div-1">
+                        <span class="checkbox-item">
+                            <div><input type="checkbox" name="weight-loss" id="opt-weight-loss" name="weight-loss"></div>
+                            <div><label for="weight-loss"> Weight Loss</label></div>
+                        </span>
+                        <span class="checkbox-item">
+                            <div><input type="checkbox" name="muscle-gain" id="opt-muscle-gain" name="muscle-gain"></div>
+                            <div><label for="muscle-gain"> Muscle Gain</label></div>
+                        </span>
+                    </div>
+                    <div class="fitness-guide-div-2">
+                        <span class="checkbox-item">
+                            <div><input type="checkbox" name="strength" id="opt-strength" name="strength"></div>
+                            <div><label for="weight-loss">Strength</label></div>
+                        </span>
+                        <span class="checkbox-item">
+                            <div><input type="checkbox" name="cardio" id="opt-cardio" name="cardio"></div>
+                            <div><label for="cardio">Cardio</label></div>
+                        </span>
+                    </div>
+
+                    <!--Mmebership Plan-->
+                    <dt>Membership Plan</dt>
+                    <dd>
+                        <select name="plans" id="plans">
+                            <option>Select Plan</option>
+                            <option>Monthly</option>
+                            <option>Quaterly</option>
+                            <option>Yearly</option>
+                        </select>
+                    </dd>
+                    
+                    <!--Joining Date-->
+                    <dt>Joining Date</dt>
+                    <dd><input type="date" name="joining-date" id="joining-date"></dd>
+
+                    <!--Workout Time-->
+                    <dt>Workout Time</dt>
+                    <dd><input type="time" name="wokrout-time" id="wokrout-time"></dd>
+
+                    <!--Theme Color-->
+                    <dt>Theme Color</dt>
+                    <dd><input type="color" name="theme-color" id="theme-color" width="100%"></dd>
+
+                    <!--Upload Medical Report-->
+                    <dt>Upload Medical Report</dt>
+                    <dd><input type="file" name="medical-report" id="medical-report"></dd>
+
+                    <!--Health Notes-->
+                    <dt>Health Notes</dt>
+                    <dd><textarea name="health-note" id="health-note" placeholder="Enter your health details . . ." rows="5" cols="50" width="100%"></textarea></dd>
+                    
+                    <!--BMI Meter-->
+                    <dt>BMI Meter</dt>
+                    <dd><meter value="60" max="100" min="0"></meter></dd>
+
+                    <!--Registration Progress-->
+                    <dt>Registration Progree</dt>
+                    <dd><progress min="0" max="100" value="60"></progress></dd>
+                    
+                    <hr>
+
+                    <button class="btn-join-now" type="submit">Join Now</button>
+                    <br>
+                    <button class="btn-reset" type="reset">Reset</button>
+
+                </dl>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
